@@ -18,17 +18,7 @@ class BinaryTreeNode
       @right = BinaryTreeNode.new(value)
       return @right
   end
-end 
-
-
-tree = BinaryTreeNode.new(1)
-tree.insert_right = BinaryTreeNode.new(5)
-tree.insert_right = BinaryTreeNode.new(5)
-tree.insert_right = BinaryTreeNode.new(5)
-tree.insert_right = BinaryTreeNode.new(5)
-
-
-
+end
 
 def is_balanced(tree)
   depths = [] 
@@ -57,8 +47,10 @@ def is_balanced(tree)
   true
 end
 
-puts is_balanced(tree)
+root = BinaryTreeNode.new(1)
+two = root.insert_right(2)
+three = two.insert_right(3)
+four = three.insert_right(4)
+five = root.insert_left(5)
 
-
-
-
+puts is_balanced root
